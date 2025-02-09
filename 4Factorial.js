@@ -1,4 +1,7 @@
 // Write a function to calculate the factorial of a given number.
+factorial = (num) => {
+    if(num === 0 || num === 1 ) return 1
+    return num * factorial(num - 1);
+}
 
-// Input: 5
-// Output: 120
+ console.log(factorial(5))
