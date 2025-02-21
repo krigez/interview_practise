@@ -4,4 +4,7 @@ factorial = (num) => {
     return num * factorial(num - 1);
 }
 
+// Order of Time complexity = 
+// Order of Space complexity = 
+
  console.log(factorial(5))

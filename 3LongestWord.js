@@ -12,4 +12,7 @@ longestWord = (str) => {
     return max
 }
 
+// Order of Time complexity = 
+// Order of Space complexity = 
+
 console.log(longestWord("The quick brownss fox jumps over the lazy dog"))

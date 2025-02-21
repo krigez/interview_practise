@@ -9,4 +9,7 @@ duplicate = (arr) => {
     return arr2
 }
 
+// Order of Time complexity = 
+// Order of Space complexity = 
+
 console.log(duplicate([1,2,3,4,2,2,3,5,4]))

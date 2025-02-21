@@ -19,6 +19,9 @@ function fibonacci(n) {
   return dp[n];
 }
 
+// Order of Time complexity = 
+// Order of Space complexity = 
+
 // Example
 console.log(fibonacci(10)); // Output: 55
 
@@ -38,6 +41,9 @@ function fibonacciS(n) {
 
   return prev1;
 }
+
+// Order of Time complexity = 
+// Order of Space complexity = 
 
 // Example
 console.log(fibonacciS(10)); // Output: 55
@@ -62,6 +68,9 @@ function fibo() {
   process.stdout.write("Enter any number: ");
 }
 
+// Order of Time complexity = 
+// Order of Space complexity = 
+
 fibo();
 
 // memoization
@@ -76,6 +85,9 @@ function fibonacci(n, memo = {}) {
   memo[n] = fibonacci(n - 1, memo) + fibonacci(n - 2, memo);
   return memo[n];
 }
+
+// Order of Time complexity = 
+// Order of Space complexity = 
 
 // Example
 console.log(fibonacci(10)); // Output: 55

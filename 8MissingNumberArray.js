@@ -13,4 +13,7 @@ missingArray = (arr) => {
     return arr2
 }
 
+// Order of Time complexity = 
+// Order of Space complexity = 
+
 console.log(missingArray([1,2,3,5]))

@@ -7,7 +7,7 @@
 // Brute Force Approach - O(n^2)
 SubarraySum = (nums, k) => {
     let count = 0;
-    nums.map((item, i) => {
+    nums.forEach((item, i) => {
         let sum = 0;
         for (let j = i; j < nums.length; j++) {
             sum += nums[j];
@@ -25,9 +25,9 @@ SubarraySum = (nums, k) => {
 // If it exists, the frequency of (currentSum - k) is added to the count.
 // The frequency of the current sum is updated in the map.
 // The count of subarrays with sum k is returned.
-function subarraySum(nums, k) {
-    let prefixSumCount = new Map();  // To store prefix sums and their frequencies
-    prefixSumCount.set(0, 1);  // Initialize with prefix sum 0 occurring once
+function subarraySumH(nums, k) {
+    let sumCountObj = new Map();  // To store prefix sums and their frequencies
+    sumCountObj.set(0, 1);  // Initialize with prefix sum 0 occurring once
     let currentSum = 0;
     let count = 0;
   
@@ -35,12 +35,12 @@ function subarraySum(nums, k) {
       currentSum += nums[i];  // Calculate the running sum
   
       // Check if (currentSum - k) exists in the map
-      if (prefixSumCount.has(currentSum - k)) {
-        count += prefixSumCount.get(currentSum - k);  // Add the frequency of (currentSum - k)
+      if (sumCountObj.has(currentSum - k)) {
+        count += sumCountObj.get(currentSum - k);  // Add the frequency of (currentSum - k)
       }
   
       // Update the frequency of the current sum in the map
-      prefixSumCount.set(currentSum, (prefixSumCount.get(currentSum) || 0) + 1);
+      sumCountObj.set(currentSum, (sumCountObj.get(currentSum) || 0) + 1);
     }
   
     return count;
@@ -49,3 +49,4 @@ function subarraySum(nums, k) {
 
 
 console.log(SubarraySum([1, 1, 1, 1], 2)); // 2
+console.log(subarraySumH([1, 1, 1, 1], 2)); // 2

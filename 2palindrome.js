@@ -7,6 +7,10 @@ function isPalindrome(str) {
     return final == myinput
 }
 
+// Order of Time complexity = 
+// Order of Space complexity = 
+
+
 console.log(isPalindrome("121"))
 console.log(isPalindrome("111"))
 console.log(isPalindrome("1234321"))

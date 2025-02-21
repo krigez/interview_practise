@@ -13,6 +13,9 @@ vowelscount = (str) => {
     return count
 }
 
+// Order of Time complexity = O(n)
+// Order of Space complexity = O(n)
+
 console.log(vowelscount("brreaam hello"))
 
 // Regex for characters
