@@ -1,21 +1,26 @@
 reverseString = (str) => {
     return str.split("").reverse().join("")
 }
-
 console.log(reverseString("Hello"))
 
-// Order of Time complexity = 
-// Order of Space complexity = 
+// Order of Time complexity = O(n)
+// Order of Space complexity = O(n)
 
 
-// loop reverse
+// two pointers
 function reverseStringLoop(str) {
-    let reversed = '';
-    for (let i = str.length - 1; i >= 0; i--) {
-      reversed += str[i];
-    }
-    return reversed;
-  }
+  // strings are immutable
+  let arr = str.split("");
+  let left = 0;
+  let right = arr.length - 1;
 
-// Order of Time complexity = 
-// Order of Space complexity = 
+  while (left < right) {
+    [arr[left], arr[right]] = [arr[right], arr[left]]; // Swap
+    left++;
+    right--;
+  }
+  return arr.join("");
+}
+
+// Order of Time complexity = O(n)
+// Order of Space complexity = O(1)
