@@ -6,6 +6,8 @@ console.log(reverseString("Hello"))
 // Order of Time complexity = O(n)
 // Order of Space complexity = O(n)
 
+// Reverse returns same array. 
+// toReverse() returns new array without mutating original array
 
 // two pointers
 function reverseStringLoop(str) {
@@ -22,5 +24,6 @@ function reverseStringLoop(str) {
   return arr.join("");
 }
 
+console.log(reverseStringLoop("Hellidusydiusdysoio"))
 // Order of Time complexity = O(n)
 // Order of Space complexity = O(1)
