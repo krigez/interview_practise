@@ -1,3 +1,27 @@
+
+charOccurance = (word) => {
+    const charMap = new Map();
+    for (const char of word) {
+        charMap.set(char, (charMap.get(char) || 0) + 1);
+    }
+    console.log(Object.fromEntries(charMap)); // Convert Map to Object for readability
+}
+
+charForeach = (word) => {
+    const charMap = new Map();
+
+    [...word].forEach(char => {
+        charMap.set(char, (charMap.get(char) || 0) + 1);
+    });
+
+    console.log(Object.fromEntries(charMap));
+}
+
+
+charForeach("programming")
+charOccurance("create an object")
+
+
 // Understand object in js - 
 
 // 1. Creating an Object: You can create an object using curly braces {} and defining key-value pairs inside.
