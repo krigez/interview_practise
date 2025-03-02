@@ -1,4 +1,13 @@
-// Write a function that reverses the order of words in a sentence.
+// Write a function to find the maximum element in an array.
 
-// Input: "Hello World"
-// Output: "World Hello"
+maxelemarray =(arr) => {
+    let maxeee = 0
+    arr.forEach(element => {
+        maxeee = Math.max(element, maxeee)
+    });
+    return maxeee
+}
+
+let input = [3, 1, 4, 1, 5, 9, 2, 6]
+console.log(maxelemarray(input))
+// Output: 9
