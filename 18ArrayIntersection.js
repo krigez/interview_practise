@@ -1,7 +1,13 @@
 // Write a function to find the intersection of two arrays.
 
 arrayintersection = (arr1, arr2) => {
-    
+    let arr3 = []
+    arr1.forEach(element => {
+        if(arr2.includes(element)) {
+            arr3.push(element)
+        }
+    })
+    return arr3
 }
 
 

@@ -17,6 +17,8 @@ vowelscount = (str) => {
 // Order of Space complexity = O(n)
 
 console.log(vowelscount("brreaam hello"))
+console.log(vowelscount("aeiouuu"))
+console.log(vowelscount("bbbbbb"))
 
 // Regex for characters
 // return count = str.match(/[aeiou]/gi).length;
