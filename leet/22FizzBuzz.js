@@ -7,3 +7,8 @@
 // 1. you need to return all as string
 
 // 2. don't forgot spaces
+
+
+let fizzbuzz = () => {
+
+    }

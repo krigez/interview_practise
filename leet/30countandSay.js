@@ -13,27 +13,28 @@
 
 
 countAndSay = (n) => {
-    let final = "1"
+    let nums = "1"
     if (n == 1) {
-        return final
+        return nums
     }
     for (i = 1; i < n; i++) {
         let count = 1
         let current = ""
-        for (j = 2; j <= final.length; j++) {
-            if (final[j] == final[j - 1]) {
+        for (j = 1; j <= nums.length; j++) {
+            if (nums[j] == nums[j - 1]) {
                 count++
             } else {
-                console.log(count.toString(), final)
-                current = current + count.toString() + final[j]
+                console.log(count.toString(), nums)
+                current = current + count.toString() + nums[j]
                 count = 1
             }
         }
-        console.log(current, ' ', final)
-        current += count.toString() + final[final.length - 1];
-        final = current;
+        console.log(current, ' ', nums)
+        current += count.toString() + nums[nums.length - 1];
+        count = 1;
+        nums = current;
     }
-    return final
+    return nums
 }
 
 

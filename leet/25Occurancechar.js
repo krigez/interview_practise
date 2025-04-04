@@ -18,8 +18,26 @@ charForeach = (word) => {
 }
 
 
-charForeach("programming")
-charOccurance("create an object")
+//charForeach("programming")
+//charOccurance("create an object")
+
+function charCountOptimized(str) {
+    let charMap = {};
+    // Hashing
+    // Count occurrences of each character
+    for (let char of str) {
+        charMap[char] = (charMap[char] || 0) + 1;
+    }
+
+    // Print the result
+    for (let char in charMap) {
+        console.log(`Character '${char}' appears ${charMap[char]} times.`);
+    }
+    console.log(charMap)
+}
+
+// Call function with input "programming"
+charCountOptimized("programming");
 
 
 // Understand object in js - 

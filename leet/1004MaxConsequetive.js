@@ -5,9 +5,9 @@
 // Bolded numbers were flipped from 0 to 1. The longest subarray is underlined.
 
 longestOnes = (nums, k) => {
-    let max_window = 0
+    let count = 0
     let zeros = 0;
-    let n = nums.length;
+    let n = nums.length-1;
     let j = 0; 
 
     for (let i = 0; i < n; i++) {
@@ -22,9 +22,9 @@ longestOnes = (nums, k) => {
             j++
         }
         let window = i - j + 1
-        max_window = Math.max(max_window, window)
+        count = Math.max(count, window)
     }
-    return max_window
+    return count
 }
 
 
